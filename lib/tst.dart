@@ -24,7 +24,7 @@ class _TstState extends State<Tst> {
   Set<Marker> markers = {};
 
   updateMap(newLat, newLong) {
-    markers.remove(Marker(markerId: MarkerId("1")));
+    markers.clear();
     markers.add(
         Marker(markerId: MarkerId("1"), position: LatLng(newLat, newLong)));
     gmc.animateCamera(CameraUpdate.newLatLng(LatLng(newLat, newLong)));
